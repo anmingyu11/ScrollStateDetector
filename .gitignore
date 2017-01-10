@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.idea/
+app/build/
+build/
+lib-ScrollDetector/build
+gradle/
+gradlew
+gradlew.bat
+gradle.properties
