@@ -1,5 +1,20 @@
 apply plugin: 'com.android.library'
-apply from: "bintrayUpload.gradle"
+apply plugin: 'com.novoda.bintray-release'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+publish {
+    userOrg = 'anmingyu11'
+    groupId = 'com.amy'
+    artifactId = 'scroll-detector'
+    publishVersion = '1.0.0'
+    desc = 'Scroll detector of android scroll view.'
+    website = 'https://github.com/anmingyu11/ScrollStateDetector'
+    repository = '${website}.git'
+    bintrayUser = properties.getProperty("bintray.user")
+    bintrayKey = properties.getProperty("bintray.apikey")
+}
 
 android {
     compileSdkVersion 25
